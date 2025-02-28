@@ -34,5 +34,5 @@ test("Validating login error message",async ({page})=>{
     await page.locator("//input[@name= 'login-button']").click();
     await expect(page.locator('[data-test="error"]')).toBeVisible();
     await expect(page.locator('[data-test="error"]')).toContainText("Epic sadface: Username and password do not match any user in this service");
-    await page.screenshot({path: "screenshot.png"});
+    await page.screenshot({path: "playwright-report/invalidloginerror.png"});
 })
